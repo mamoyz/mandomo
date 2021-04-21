@@ -24,7 +24,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, target-densityDpi=device-dpi" name="viewport" />
-		<title>Mandomo</title>
+    <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 		<script>
 			window.addEventListener("orientationchange", function () {
 				window.location.reload();
