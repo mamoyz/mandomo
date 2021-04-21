@@ -735,6 +735,9 @@ header {
 				margin: 15vw 0 4vw;
 				-webkit-text-stroke: 0.15vw white;
 			}
+			span {
+				display: block;
+			}
 		}
 		.sec2-content {
 			display: flex;
@@ -905,6 +908,9 @@ header {
 			position: relative;
 			z-index: 50;
 			min-height: 230px;
+			span {
+				display: block;
+			}
 			@include down-md() {
 				font-size: 6vw;
 				letter-spacing: 4vw;
@@ -1208,6 +1214,9 @@ header {
 				-webkit-text-stroke: 0.15vw white;
 				min-height: 10vw;
 			}
+			span {
+				display: block;
+			}
 		}
 	}
 	.credits-logos {
@@ -1341,6 +1350,9 @@ header {
 				min-width: 18vw;
 				margin-bottom: -15vw;
 				-webkit-text-stroke: 0.15vw white;
+			}
+			span {
+				display: block;
 			}
 		}
 		.contact-video {

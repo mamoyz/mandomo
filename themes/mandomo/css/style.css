@@ -374,6 +374,8 @@ header.isReady .indicator { -webkit-animation: 1s fadeUp 2s forwards; animation:
 
 @media (max-width: 1023px) and (orientation: portrait) { .sec-architects .wrapper h2 { font-size: 6vw; letter-spacing: 2.7vw; text-align: left; line-height: 8.5vw; min-height: 26vw; margin: 15vw 0 4vw; -webkit-text-stroke: 0.15vw white; } }
 
+.sec-architects .wrapper h2 span { display: block; }
+
 .sec-architects .wrapper .sec2-content { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 @media (max-width: 1023px) and (orientation: portrait) { .sec-architects .wrapper .sec2-content { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; } }
@@ -435,6 +437,8 @@ header.isReady .indicator { -webkit-animation: 1s fadeUp 2s forwards; animation:
 @media (max-width: 1023px) and (orientation: portrait) { .sec-sampler .sec-title .line2 { right: 6vw; left: auto; top: -15vw; max-height: 43vw !important; } }
 
 .sec-sampler .sec-title h2 { -webkit-text-stroke: 1.8px white; color: transparent; max-width: 670px; font-size: 72px; letter-spacing: 30px; position: relative; z-index: 50; min-height: 230px; }
+
+.sec-sampler .sec-title h2 span { display: block; }
 
 @media (max-width: 1023px) and (orientation: portrait) { .sec-sampler .sec-title h2 { font-size: 6vw; letter-spacing: 4vw; line-height: 7vw; min-height: 15vw; -webkit-text-stroke: 0.15vw white; } }
 
@@ -566,6 +570,8 @@ header.isReady .indicator { -webkit-animation: 1s fadeUp 2s forwards; animation:
 
 @media (max-width: 1023px) and (orientation: portrait) { .sec-credits .sec-title h2 { text-align: right; font-size: 7vw; letter-spacing: 3vw; margin-right: -3vw; -webkit-text-stroke: 0.15vw white; min-height: 10vw; } }
 
+.sec-credits .sec-title h2 span { display: block; }
+
 .sec-credits .credits-logos { margin-top: 80px; padding-left: 160px; padding-right: 60px; }
 
 @media (max-width: 1023px) and (orientation: portrait) { .sec-credits .credits-logos { margin-top: 10vw; padding-left: 0; padding-right: 0; }
@@ -606,6 +612,8 @@ header.isReady .indicator { -webkit-animation: 1s fadeUp 2s forwards; animation:
 .sec-contact .contact-right h2 { -webkit-writing-mode: vertical-lr; -ms-writing-mode: tb-lr; writing-mode: vertical-lr; float: right; font-size: 100px; letter-spacing: 31px; line-height: 100px; min-height: 850px; position: relative; top: -40px; right: -30px; -webkit-text-stroke: 1.8px white; color: transparent; z-index: 35; margin: 0; min-width: 140px; }
 
 @media (max-width: 1023px) and (orientation: portrait) { .sec-contact .contact-right h2 { font-size: 11vw; letter-spacing: 2.5vw; line-height: 11vw; right: -8vw; top: -15vw; min-height: 90vw; min-width: 18vw; margin-bottom: -15vw; -webkit-text-stroke: 0.15vw white; } }
+
+.sec-contact .contact-right h2 span { display: block; }
 
 .sec-contact .contact-right .contact-video { position: absolute; top: 0; right: -211px; width: 585px; z-index: 30; opacity: 0; -webkit-transform: translate(0, 30px); transform: translate(0, 30px); }
 
