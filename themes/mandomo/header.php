@@ -54,13 +54,13 @@
 							</div>
 							<div class="menu-videos" :key="link.title" :class="{ active: index==currentMenuVideo }" v-for="(link,index) in menu">
 								<video playsinline autoplay muted loop>
-									<source :src="link.video" type="video/mp4" />
+									<source :src="link.background_video" type="video/mp4" />
 								</video>
 							</div>
 							<nav>
 								<ul>
 									<li>
-										<img class="menu-logo" src="static/images/logo.png" alt="" />
+										<img class="menu-logo" src="<?php the_field('static_logo'); ?>" alt="" />
 									</li>
 									<li v-for="(link,index) in menu" :key="link.title" @mouseover="menuHover(index)">
 										<a @click.prevent="toggleMenu(index)" href="#"><span>{{link.title}}</span></a>
@@ -69,10 +69,10 @@
 							</nav>
 							<div class="menu-bottom">
 								<div>
-									<p>ARCHITECTS OF IDENTITY</p>
+									<p><?php the_field('footer_tagline'); ?></p>
 								</div>
 								<div>
-									<p>COPTRIGHT 2021 MANDOMO LLC.</p>
+									<p><?php the_field('copyright_text'); ?></p>
 								</div>
 							</div>
 						</div>

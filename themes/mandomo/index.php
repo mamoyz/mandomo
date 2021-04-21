@@ -1,29 +1,28 @@
 <?php get_header(); ?>
 
+
 			<section class="section hero">
 				<div class="container">
 					<div class="hero-wrapper">
 						<div class="loading-overlay" :class="{loaded,isReady}">
 							<video playsinline autoplay muted loop>
-								<source src="static/videos/mandomo_static_blue.mp4" type="video/mp4" />
+								<source src="<?php the_field('background_video'); ?>" type="video/mp4" />
 							</video>
 						</div>
 						<div class="logo-intro" :class="{loaded,isReady}">
-							<img src="static/images/logo-animated.gif" alt="" />
+							<img src="<?php the_field('animated_logo'); ?>" alt="" />
 						</div>
 						<div @click="pausePlay()" :class="{loaded,isReady}" class="hero-video-play">
 							<a class="hidden-desktop" @click.prevent.stop="unmute('mobile')" href="#">
 								<span v-show="!playWithSoundMobile">
-									<span>PLAY</span>
-									<span>WITH SOUND</span>
+									<?php the_field('hero_title'); ?>
 								</span>
 
 								<svg v-show="!playWithSoundMobile" id="Capa_1" enable-background="new 0 0 494.942 494.942" height="512" viewBox="0 0 494.942 494.942" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m35.353 0 424.236 247.471-424.236 247.471z" /></svg>
 							</a>
 							<a class="hidden-mobile" @click.prevent.stop="unmute('desktop')" href="#">
 								<span v-show="!playWithSoundDesktop">
-									<span>PLAY</span>
-									<span>WITH SOUND</span>
+									<?php the_field('hero_title'); ?>
 								</span>
 
 								<svg v-show="!playWithSoundDesktop" id="Capa_1" enable-background="new 0 0 494.942 494.942" height="512" viewBox="0 0 494.942 494.942" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m35.353 0 424.236 247.471-424.236 247.471z" /></svg>
@@ -31,14 +30,14 @@
 						</div>
 						<div class="logo" :class="{loaded,isReady}">
 							<a href="#">
-								<img src="static/images/logo-animated.gif" alt="" />
+								<img src="<?php the_field('animated_logo'); ?>" alt="" />
 							</a>
 						</div>
 						<video class="hidden-mobile heroVideo" playsinline autoplay :muted="!playWithSoundDesktop" loop>
-							<source src="static/videos/mandomo_trailer_0413.mp4" type="video/mp4" />
+							<source src="<?php the_field('trailer_video'); ?>" type="video/mp4" />
 						</video>
 						<video class="hidden-desktop heroVideo" playsinline autoplay :muted="!playWithSoundMobile" loop>
-							<source src="static/videos/mandomo_trailer_0413_mobile.mp4" type="video/mp4" />
+							<source src="<?php the_field('trailer_video_mobile'); ?>" type="video/mp4" />
 						</video>
 						<a :class="{loaded,isReady}" class="explore" href="#"><span>EXPLORE</span></a>
 						<div :class="{loaded,isReady}" class="line line1"></div>
@@ -50,23 +49,21 @@
 					<div class="wrapper">
 						<div class="line line2"></div>
 						<h2>
-							<span class="random-title" data-content="ARCHITECTS"></span>
-							<span class="random-title" data-content="OF IDENTITY"></span>
+							<?php the_field('architects_main_title'); ?>
 						</h2>
 						<div class="sec2-content yz-animate">
 							<div class="left yz-animate-mobile">
-								<h3>To elevate visual identity through bold cinematic sound</h3>
+								<h3><?php the_field('architects_secondary_title'); ?></h3>
 							</div>
 							<div class="right yz-animate-mobile">
-								<p>Based in Los Angeles, Mandomo is an independent music production company and publisher, specializing in licensing and placement for advertising, trailers, TV, and film.</p>
-
-								<p>The Mandomo sound is the bold synthesis of orchestral and hip hop tones, bringing raw visuals to life through cinematic soundscapes.</p>
-
-								<p>Since 2010, our roster has continued to curate and deliver music across the worlds of sports, entertainment, film, and fashion.  Known for adapting and evolving our core sound to perfectly mesh with our clients and partners, Mandomo is in constant motion to create the sounds of tomorrow.</p>
+							<?php the_field('architects_content_text'); ?>
 							</div>
 							<div class="architects-video yz-animate-mobile">
-								<video class="floating-video" playsinline autoplay muted loop>
-									<source src="static/videos/sec-architects.mp4" type="video/mp4" />
+								<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+									<source src="<?php the_field('architects_video'); ?>" type="video/mp4" />
+								</video>
+								<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+									<source src="<?php the_field('architects_video_mobile'); ?>" type="video/mp4" />
 								</video>
 							</div>
 						</div>
@@ -81,19 +78,21 @@
 						<div class="sec-title">
 							<div :class="{loaded,isReady}" class="line line2 line-on-scroll"></div>
 							<h2>
-								<span class="random-title" data-content="MMXXI"></span>
-								<span class="random-title" data-content="SAMPLER"></span>
+								<?php the_field('sampler_main_title'); ?>
 							</h2>
 						</div>
 						<div class="sec-content yz-animate">
 							<div class="left yz-animate-mobile">
-								<video class="floating-video" playsinline autoplay muted loop>
-									<source src="static/videos/sec-samplers.mp4" type="video/mp4" />
+								<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+									<source src="<?php the_field('sampler_video'); ?>" type="video/mp4" />
+								</video>
+								<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+									<source src="<?php the_field('sampler_video_mobile'); ?>" type="video/mp4" />
 								</video>
 							</div>
 							<div class="right">
 								<div class="audios">
-									<div class="audio-item yz-animate-mobile" :data-src="audio.src" v-for="(audio,index) in tracks" :key="index">
+									<div class="audio-item yz-animate-mobile" :data-src="audio.audio_file_mp3" v-for="(audio,index) in tracks" :key="index">
 										<div class="controls" :style="'animation-delay:'+ (index*200+1000)+'ms'">
 											<svg class="play" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320.001 320.001" style="enable-background: new 0 0 320.001 320.001" xml:space="preserve">
 												<path
@@ -133,8 +132,7 @@
 									</div>
 								</div>
 								<div class="content yz-animate yz-animate-mobile">
-									<p>We maintain a diverse catalog and team to satisfy a wide array of musical needs, though our specialty remains in the hip-hop and cinematic genres. Whether it's through our production music catalog or custom work, we strive to draw emotion and inspire audiences</p>
-									<h4>CONTACT US FOR THE FULL MANDOMO CATALOG.</h4>
+									<?php the_field('sampler_text_content'); ?>
 								</div>
 							</div>
 						</div>
@@ -144,20 +142,23 @@
 			<section class="section sec-credits yz-animate">
 				<div class="container">
 					<div class="credits-video yz-animate-mobile">
-						<video class="floating-video" playsinline autoplay muted loop>
-							<source src="static/videos/sec-credits.mp4" type="video/mp4" />
+						<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+							<source src="<?php the_field('credits_video'); ?>" type="video/mp4" />
+						</video>
+							<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+							<source src="<?php the_field('credits_video_mobile'); ?>" type="video/mp4" />
 						</video>
 					</div>
 					<div class="wrapper">
 						<div class="sec-title">
 							<h2>
-								<span class="random-title" data-content="CREDITS"></span>
+								<?php the_field('credits_main_title'); ?>
 							</h2>
 						</div>
 						<div class="credits-logos yz-animate-mobile">
 							<div class="credits-logos-wrapper">
 								<div class="logo-item" :style="'animation-delay:'+ (index*100+1000)+'ms'" v-for="(logo,index) in logos" v-show="index < logos.length - 1">
-									<credit-img :src="logo.src"></credit-img>
+									<credit-img :src="logo"></credit-img>
 								</div>
 							</div>
 						</div>
@@ -170,52 +171,21 @@
 						<div class="line line4 line-on-scroll"></div>
 
 						<div class="contact-form">
-							<form action="">
-								<div class="inputs yz-animate-mobile">
-									<div class="input-group yz-animate-mobile">
-										<div class="input-label">
-											<label>Name</label>
-										</div>
-										<div class="input-field">
-											<input placeholder="Your Name" class="mandomo-input" type="text" name="" id="" />
-										</div>
-									</div>
-									<div class="input-group yz-animate-mobile">
-										<div class="input-label">
-											<label>Email</label>
-										</div>
-										<div class="input-field">
-											<input placeholder="Your Email Address" class="mandomo-input" type="email" name="" id="" />
-										</div>
-									</div>
-									<div class="input-group yz-animate-mobile">
-										<div class="input-label">
-											<label>Subject</label>
-										</div>
-										<div class="input-field">
-											<input placeholder="Catalog Request" class="mandomo-input" type="text" name="" id="" />
-										</div>
-									</div>
-									<div class="input-group col yz-animate-mobile">
-										<div class="input-label">
-											<label>Message</label>
-										</div>
-										<div class="input-field">
-											<textarea v-model="textarea" class="mandomo-input textarea"></textarea>
-											<h3 v-show="!textarea.length"><span id="pageMainTitle"></span></h3>
-										</div>
-									</div>
-									<input type="submit" value="SEND" class="wpcf7-form-control wpcf7-submit yz-animate-mobile" />
-								</div>
-							</form>
+					<?php
+					$shortcode = '[contact-form-7 id="'.get_field("contact_form").'" title="Mandomo Contact Form"]';
+					 echo do_shortcode($shortcode) ;
+					?>
 						</div>
 						<div class="contact-right">
 							<h2>
-								<span class="random-title" data-content="CONTACT"></span>
+								<?php the_field('contact_main_title'); ?>
 							</h2>
 							<div class="contact-video yz-animate-mobile">
-								<video class="floating-video" playsinline autoplay muted loop>
-									<source src="static/videos/sec-contact.mp4" type="video/mp4" />
+								<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+									<source src="<?php the_field('contact_video_copy'); ?>" type="video/mp4" />
+								</video>
+								<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+									<source src="<?php the_field('contact_video_mobile'); ?>" type="video/mp4" />
 								</video>
 							</div>
 						</div>
@@ -224,7 +194,7 @@
 			</section>
 			<div class="video-bg" :class="{loaded,isReady}">
 				<video playsinline autoplay muted loop>
-					<source src="static/videos/mandomo_static_blue.mp4" type="video/mp4" />
+					<source src="<?php the_field('background_video'); ?>" type="video/mp4" />
 				</video>
 			</div>
 

@@ -28,4 +28,11 @@ function jaback_scripts()
 }
 add_action('wp_enqueue_scripts', 'jaback_scripts');
 
-
+add_filter( 'wpcf7_form_elements', 'imp_wpcf7_form_elements' );
+function imp_wpcf7_form_elements( $content ) {
+    $str_pos = strpos( $content, 'name="message"' );
+    if ( $str_pos !== false ) {
+        $content = substr_replace( $content, ' v-model="textarea" ', $str_pos, 0 );
+    }
+    return $content;
+}

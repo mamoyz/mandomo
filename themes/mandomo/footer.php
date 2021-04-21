@@ -3,13 +3,13 @@
 					<div class="wrapper">
 						<div>
 							<div class="footer-logo">
-								<img src="static/images/logo.png" alt="" />
+								<img src="<?php the_field('static_logo'); ?>" alt="" />
 							</div>
 						</div>
 						<div>
-							<p>ARCHITECTS OF IDENTITY</p>
+							<p><?php the_field('footer_tagline'); ?></p>
 						</div>
-						<div>COPYRIGHT 2021 MANDOMO LLC.</div>
+						<div><?php the_field('copyright_text'); ?></div>
 					</div>
 				</div>
 			</footer>
@@ -21,5 +21,8 @@
 		</script>
 
         <?php wp_footer(); ?>
+		<script>
+			<?php require("vue.php"); ?>
+		</script>
 	</body>
 </html>
