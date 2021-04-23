@@ -29,7 +29,7 @@
 					let wavesurfers = [];
 			$.each($(".audio-item"), function (index) {
 				let src = $(this).attr("data-src");
-				const waveHeight = parseInt((70 / 1920) * $(window).innerWidth());
+				const waveHeight = ( $(window).innerWidth() >  $(window).innerHeight())? parseInt((70 / 1920) * $(window).innerWidth()) :  parseInt((50 / 414) * $(window).innerWidth());
 
 				let wavesurfer = WaveSurfer.create({
 					container: ".audio-item-" + index,
@@ -37,9 +37,9 @@
 					cursorColor: "transparent",
 					waveColor: "#36373f",
 					normalize: true,
-					barHeight: waveHeight,
-					height: waveHeight,
-					partialRender: true,
+					barHeight: waveHeight || 70,
+					height: waveHeight || 70,
+					partialRender: false,
 					responsive: true,
 				});
 				wavesurfer.load(src);
