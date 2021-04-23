@@ -22,7 +22,7 @@
 			setTimeout(function() {
 					let wavesurfers = [];
 			$.each($(".audio-item"), function (index) {
-				let src = $(this).data("src");
+				let src = $(this).attr("data-src");
 				const waveHeight = parseInt((70 / 1920) * $(window).innerWidth());
 
 				let wavesurfer = WaveSurfer.create({
