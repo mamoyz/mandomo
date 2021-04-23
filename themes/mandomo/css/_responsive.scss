@@ -130,12 +130,10 @@
 			font-size: 0.68vw;
 			letter-spacing: 0.3vw;
 			transform: translate(0, 1.56vw);
-			padding: 0.78vw;
-			margin: -0.78vw -0.78vw 0 0;
+			padding: 0.78vw 0;
 		}
 		.indicator {
 			right: 8.85vw;
-			margin-right: -1.56vw;
 			width: 3.91vw;
 			@include down-md() {
 			}
@@ -981,10 +979,8 @@
 			right: 8vw;
 			font-size: 0.93vw;
 			letter-spacing: 0.35vw;
-
 			transform: translate(0, 2.14vw);
-			padding: 1.07vw;
-			margin: -1.07vw -1.07vw 0 0;
+			padding: 1.07vw 0;
 			@media (min-width: 191.5vw) {
 			}
 			@include down-md() {
@@ -992,7 +988,6 @@
 		}
 		.indicator {
 			right: 8vw;
-			margin-right: -2.14vw;
 			width: 5.36vw;
 			padding-top: 5vw;
 			@include down-md() {
