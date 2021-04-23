@@ -14,7 +14,13 @@
 				</div>
 			</footer>
 		</div>
+	
+
+        <?php wp_footer(); ?>
 		<script>
+			<?php require("vue.php"); ?>
+		</script>
+			<script>
 			if (navigator.userAgent.indexOf("Trident") > 0) {
 				document.querySelector("#app").innerHTML = "<div id='ie-notice'><p>Please Upgrade Your Browser!</p></div>";
 			}
@@ -68,11 +74,6 @@
 			}, 1000);
 		});
 
-		</script>
-
-        <?php wp_footer(); ?>
-		<script>
-			<?php require("vue.php"); ?>
 		</script>
 	</body>
 </html>
