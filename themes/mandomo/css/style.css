@@ -166,6 +166,8 @@ body { margin: 0; padding: 0; background: #110f14; color: #fff; font-family: "Te
 
 @media (max-width: 1023px) and (orientation: portrait) { .line { width: 1vw; } }
 
+.section { position: relative; z-index: 55; }
+
 .hero { width: 100%; height: calc(var(--vh, 1vh) * 100); padding-top: 75px; padding-bottom: 115px; }
 
 @media (max-width: 1023px) and (orientation: portrait) { .hero { padding-top: 0; padding-bottom: 0; }

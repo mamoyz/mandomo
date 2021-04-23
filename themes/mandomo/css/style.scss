@@ -121,6 +121,10 @@ body {
 		width: 1vw;
 	}
 }
+.section {
+	position: relative;
+	z-index: 55;
+}
 .hero {
 	width: 100%;
 	height: calc(var(--vh, 1vh) * 100);
