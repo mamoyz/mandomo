@@ -65,7 +65,7 @@
 						wavesurfers[index].pause();
 					});
 			});
-			}, 0);
+			}, 1000);
 		});
 
 		</script>
