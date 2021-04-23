@@ -25,6 +25,9 @@
 				document.querySelector("#app").innerHTML = "<div id='ie-notice'><p>Please Upgrade Your Browser!</p></div>";
 			}
 		window.addEventListener("load", function(){
+			if(navigator.userAgent.toLowerCase().indexOf('firefox') > 0){
+				$(".hideFF").remove();
+			}
 			setTimeout(function() {
 					let wavesurfers = [];
 			$.each($(".audio-item"), function (index) {

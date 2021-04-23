@@ -5,9 +5,9 @@
 				<div class="container">
 					<div class="hero-wrapper">
 						<div class="loading-overlay" :class="{loaded,isReady}">
-							<!-- <video playsinline  muted loop>
+							<video class="hideFF" playsinline autoplay muted loop>
 								<source src="<?php the_field('background_video'); ?>" type="video/mp4" />
-							</video> -->
+							</video>
 						</div>
 						<div class="logo-intro" :class="{loaded,isReady}">
 							<img src="<?php the_field('static_logo'); ?>" alt="" />
@@ -198,10 +198,10 @@
 					</div>
 				</div>
 			</section>
-			<!-- <div class="video-bg" :class="{loaded,isReady}">
-				<video playsinline  muted loop>
+			<div class="video-bg" :class="{loaded,isReady}">
+				<video class="hideFF" playsinline autoplay muted loop>
 					<source src="<?php the_field('background_video'); ?>" type="video/mp4" />
 				</video>
-			</div> -->
+			</div>
 
 <?php get_footer(); ?>
