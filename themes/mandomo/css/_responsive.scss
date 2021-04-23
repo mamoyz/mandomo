@@ -114,8 +114,8 @@
 		}
 		.explore {
 			transform: translate(0, 1.56vw);
-			font-size: 0.49vw;
-			letter-spacing: 0.31vw;
+			font-size: 0.68vw;
+			letter-spacing: 0.3vw;
 			bottom: -2.34vw;
 			@include down-md() {
 			}
@@ -127,8 +127,8 @@
 		.menu-toggle {
 			top: 6.77vw;
 			right: 8.85vw;
-			font-size: 0.49vw;
-			letter-spacing: 0.31vw;
+			font-size: 0.68vw;
+			letter-spacing: 0.3vw;
 			transform: translate(0, 1.56vw);
 			padding: 0.78vw;
 			margin: -0.78vw -0.78vw 0 0;
@@ -236,7 +236,7 @@
 							line-height: 3.91vw;
 							font-size: 3.91vw;
 							letter-spacing: 1.56vw;
-							-webkit-text-stroke: 0.09vw white;
+							-webkit-text-stroke: 0.1vw white;
 							&:hover {
 							}
 							@include down-md() {
@@ -610,8 +610,8 @@
 		}
 		.credits-logos {
 			margin-top: 4.17vw;
-			padding-left: 8.33vw;
-			padding-right: 3.13vw;
+			padding-left: 5.73vw;
+			padding-right: 5.73vw;
 			@include down-md() {
 				&.init {
 					.credits-logos,
@@ -759,7 +759,7 @@
 					h3 {
 						font-size: 1.67vw;
 						letter-spacing: 0.16vw;
-						top: 2.6vw;
+						top: 3.12vw;
 						@include down-md() {
 						}
 					}
@@ -768,15 +768,13 @@
 			input[type="submit"] {
 				transform: translate(0, 1.56vw);
 				font-size: 0.68vw;
-				letter-spacing: 3px;
+				letter-spacing: 0.16vw;
 				padding: 0.52vw 0;
 				@include down-md() {
 					&.init {
 					}
 				}
-				&:hover {
-					// border-bottom: 1px solid #555;
-				}
+				border-bottom: 0.1vw solid #555;
 			}
 		}
 		&.init {
@@ -964,8 +962,9 @@
 		}
 		.explore {
 			transform: translate(0, 2.14vw);
-			font-size: 0.79vw;
-			letter-spacing: 0.36vw;
+			font-size: 0.93vw;
+			letter-spacing: 0.35vw;
+
 			bottom: -3.21vw;
 			@include down-md() {
 			}
@@ -977,8 +976,9 @@
 		.menu-toggle {
 			top: 9.29vw;
 			right: 8vw;
-			font-size: 1vw;
-			letter-spacing: 0.36vw;
+			font-size: 0.93vw;
+			letter-spacing: 0.35vw;
+
 			transform: translate(0, 2.14vw);
 			padding: 1.07vw;
 			margin: -1.07vw -1.07vw 0 0;
@@ -1092,7 +1092,8 @@
 							line-height: 2vw;
 							font-size: 2vw;
 							letter-spacing: 0.5vw;
-							-webkit-text-stroke: 0.03vw white;
+							-webkit-text-stroke: 0.09vw white;
+
 							&:hover {
 							}
 							@include down-md() {
@@ -1436,8 +1437,8 @@
 		}
 		.credits-logos {
 			margin-top: 5.71vw;
-			padding-left: 11.43vw;
-			padding-right: 4.29vw;
+			padding-left: 7.86vw;
+			padding-right: 7.86vw;
 			@include down-md() {
 				&.init {
 					.credits-logos,
@@ -1571,7 +1572,7 @@
 					h3 {
 						font-size: 2.29vw;
 						letter-spacing: 0.21vw;
-						top: 3.57vw;
+						top: 4.28vw;
 						@include down-md() {
 						}
 					}
@@ -1580,15 +1581,13 @@
 			input[type="submit"] {
 				transform: translate(0, 2.14vw);
 				font-size: 0.93vw;
-				letter-spacing: 3px;
+				letter-spacing: 0.21vw;
 				padding: 0.71vw 0;
 				@include down-md() {
 					&.init {
 					}
 				}
-				&:hover {
-					border-bottom: 1px solid #555;
-				}
+				border-bottom: 0.14vw solid #555;
 			}
 		}
 		&.init {

@@ -37,7 +37,7 @@ Vue.component("credit-img", {
 var app = new Vue({
 	el: "#app",
 	data: {
-
+		hideTypeWriter: false,
         loaded: false,
 		percentage: 0,
 		isReady: false,
@@ -57,6 +57,14 @@ var app = new Vue({
 		defaultVideoMobile: "<?php the_field('nav_default_background_video_mobile'); ?>",
 	},
 	methods: {
+
+		textareaFocusHandler(){
+			this.hideTypeWriter = true;
+		},
+		textareaBlurHandler(){
+			if (!this.textarea.length) this.hideTypeWriter = false;
+		}
+		,
 		menuHover(index) {
 			if (!this.closing) this.currentMenuVideo = index;
 		},
@@ -90,8 +98,8 @@ var app = new Vue({
 
 					console.log("LOADED");
 					this.initSoundWave();
-					$(".heroVideo.hidden-desktop")[0].currentTime = 11;
-					$(".heroVideo.hidden-mobile")[0].currentTime = 11;
+					$(".heroVideo.hidden-desktop")[0].currentTime = 9;
+					$(".heroVideo.hidden-mobile")[0].currentTime = 9;
 					setTimeout(() => {
 						this.isReady = true;
 						$("body").css({ "overflow-y": "scroll", height: "auto" });
@@ -394,12 +402,20 @@ var app = new Vue({
 
 		$(document).on("click", ".indicator a", function (e) {
 			e.preventDefault();
-
-			let $target = $(".section").eq($(this).index())[0];
-			let $targetTop = $($target).offset().top - $(window).innerHeight() * 0.05 + "px";
-			if ($(this).index() == 1) {
-				$targetTop = $($target).offset().top + "px";
-			}
+			let targets = [
+				{ index: 0, target: ".section.hero" },
+				{ index: 1, target: ".sec-architects .wrapper h2" },
+				{ index: 2, target: ".sec-sampler .sec-title h2" },
+				{ index: 3, target: ".sec-credits .sec-title h2" },
+				{ index: 4, target: ".sec-contact .contact-right h2" }
+			];
+			let $target = targets.filter(t => t.index == $(this).index())[0];
+			let menuTop = $("header .menu-toggle").css("top");
+			let margin = $(window).innerWidth > 1023 ? 0 : 30;
+			let $targetTop = $($target.target).offset().top - menuTop.replace("px","") - margin + "px";
+			// if ($(this).index() == 1) {
+			// 	$targetTop = $($target).offset().top + "px";
+			// }
 			$("html, body").animate(
 				{
 					scrollTop: $targetTop,

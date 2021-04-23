@@ -20,6 +20,7 @@ function mandomo_scripts()
 
     /* ----------- Javascripts --------------- */
     wp_enqueue_script('jquery-js', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array(), null, false);
+    // wp_enqueue_script('vue-js', 'https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js', array(), null, false);
     wp_enqueue_script('vue-js', 'https://cdn.jsdelivr.net/npm/vue@2.6.12', array(), null, false);
     wp_enqueue_script('wavesurfer-js', 'https://unpkg.com/wavesurfer.js', array(), null, false);
     wp_enqueue_script('typewriter-js', 'https://unpkg.com/typewriter-effect@latest/dist/core.js', array(), null, true);
@@ -32,7 +33,7 @@ add_filter( 'wpcf7_form_elements', 'imp_wpcf7_form_elements' );
 function imp_wpcf7_form_elements( $content ) {
     $str_pos = strpos( $content, 'name="message"' );
     if ( $str_pos !== false ) {
-        $content = substr_replace( $content, ' v-model="textarea" ', $str_pos, 0 );
+        $content = substr_replace( $content, ' v-model="textarea" @focus="textareaFocusHandler()" @blur="textareaBlurHandler()" ', $str_pos, 0 );
     }
     return $content;
 }

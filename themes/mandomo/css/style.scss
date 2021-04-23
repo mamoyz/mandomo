@@ -332,9 +332,11 @@ body {
 		opacity: 0;
 		color: #fff;
 		text-transform: uppercase;
-		font-size: 9.5px;
-		font-weight: 500;
-		letter-spacing: 6px;
+
+		font-family: "Termina Demi";
+		font-size: 13px;
+		letter-spacing: 5px;
+		font-weight: 600;
 		left: 0;
 		right: 0;
 		position: absolute;
@@ -342,6 +344,7 @@ body {
 		margin: auto;
 		text-align: center;
 		display: inline-block;
+		cursor: default !important;
 		text-decoration: none;
 		@include down-md() {
 			font-size: 2vw;
@@ -364,9 +367,10 @@ header {
 		z-index: 1000;
 		color: #fff;
 		text-transform: uppercase;
-		font-size: 9.5px;
-		font-weight: 500;
-		letter-spacing: 6px;
+		font-family: "Termina Demi";
+		font-size: 13px;
+		letter-spacing: 5px;
+		font-weight: 600;
 		text-decoration: none;
 		transform: translate(0, 30px);
 		padding: 15px;
@@ -602,7 +606,7 @@ header {
 						line-height: 75px;
 						font-size: 75px;
 						letter-spacing: 30px;
-						-webkit-text-stroke: 1.8px white;
+						-webkit-text-stroke: 2.2px white;
 						color: transparent;
 						text-transform: uppercase;
 						font-weight: 800;
@@ -800,6 +804,7 @@ header {
 				}
 				p {
 					margin: 0 0 45px 0;
+					text-align: justify;
 					@include down-md() {
 						margin: 0 0 6vw 0;
 					}
@@ -1221,8 +1226,8 @@ header {
 	}
 	.credits-logos {
 		margin-top: 80px;
-		padding-left: 160px;
-		padding-right: 60px;
+		padding-left: 110px;
+		padding-right: 110px;
 		@include down-md() {
 			margin-top: 10vw;
 			padding-left: 0;
@@ -1390,6 +1395,9 @@ header {
 		}
 	}
 	.contact-form {
+		p {
+			margin: 0 !important;
+		}
 		@include down-md() {
 			margin-top: -9vw;
 			position: relative;
@@ -1492,7 +1500,7 @@ header {
 					text-transform: uppercase;
 					letter-spacing: 3px;
 					position: absolute;
-					top: 50px;
+					top: 60px;
 					left: 0;
 					width: 100%;
 					z-index: 20;
@@ -1509,9 +1517,9 @@ header {
 			transform: translate(0, 30px);
 			font-family: "Termina Demi";
 			font-size: 13px;
-			text-transform: uppercase;
-			font-weight: 600;
 			letter-spacing: 3px;
+			font-weight: 600;
+			text-transform: uppercase;
 			-webkit-appearance: none;
 			cursor: pointer;
 			background: #110f14;
@@ -1519,6 +1527,7 @@ header {
 			outline: 0;
 			color: #fff;
 			padding: 10px 0;
+			border-bottom: 2px solid #555;
 			@include down-md() {
 				font-size: 2.9vw;
 				letter-spacing: 0.3vw;
@@ -1527,9 +1536,6 @@ header {
 				&.init {
 					animation: 0.3s fadeUp 0.3s forwards;
 				}
-			}
-			&:hover {
-				// border-bottom: 1px solid #555;
 			}
 		}
 	}
