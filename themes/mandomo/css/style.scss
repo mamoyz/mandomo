@@ -1,3 +1,15 @@
+.landscape-notice {
+	background: #110f14 url("../images/mandomo_phone.jpg") no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9000000;
+	background-size: auto 100%;
+	background-position: center;
+	display: none;
+}
 #ie-notice {
 	margin: 200px auto;
 	text-align: center;
@@ -136,7 +148,7 @@ body {
 		clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%);
 		height: calc(var(--vh, 1vh) * 100 - 40px);
 		background: #110f14;
-		transition: 6s all 1s linear;
+		transition: 6s clip-path 1s linear;
 		video {
 			z-index: 51;
 		}
@@ -151,7 +163,7 @@ body {
 			}
 		}
 		&.isReady {
-			transition: all 2s ease;
+			transition: clip-path 2s ease;
 			clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 0%);
 		}
 		@media (min-width: 1921px) {
@@ -716,6 +728,9 @@ header {
 
 .sec-architects {
 	padding-top: 190px;
+	@include down-md() {
+		padding-top: 15vw;
+	}
 	.wrapper {
 		position: relative;
 		h2 {

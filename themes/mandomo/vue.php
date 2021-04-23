@@ -45,7 +45,7 @@ var app = new Vue({
 		playWithSoundDesktop: false,
 		playWithSoundMobile: false,
 		isPlaying: true,
-		tracks: <?php echo  json_encode(get_field("audios"), JSON_UNESCAPED_SLASHES);?>,
+		// tracks: <?php echo  json_encode(get_field("audios"), JSON_UNESCAPED_SLASHES);?>,
 		logos: <?php echo  json_encode(get_field("logos"), JSON_UNESCAPED_SLASHES);?>,
 		spareLogo: "",
 		textarea: "",
@@ -97,7 +97,7 @@ var app = new Vue({
 					window.scrollTo(0, 0);
 
 					console.log("LOADED");
-					this.initSoundWave();
+					// this.initSoundWave();
 					$(".heroVideo.hidden-desktop")[0].currentTime = 9;
 					$(".heroVideo.hidden-mobile")[0].currentTime = 9;
 					setTimeout(() => {
@@ -191,51 +191,7 @@ var app = new Vue({
 			this.isPlaying = !this.isPlaying;
 		},
 		initSoundWave() {
-			let wavesurfers = [];
-			$.each($(".audio-item"), function (index) {
-				let src = $(this).data("src");
-				const waveHeight = parseInt((70 / 1920) * $(window).innerWidth());
-
-				let wavesurfer = WaveSurfer.create({
-					container: ".audio-item-" + index,
-					progressColor: "#FFFFFF",
-					cursorColor: "transparent",
-					waveColor: "#36373f",
-					normalize: true,
-					barHeight: waveHeight,
-					height: waveHeight,
-					partialRender: true,
-					responsive: true,
-				});
-				wavesurfer.load(src);
-				wavesurfers.push(wavesurfer);
-				wavesurfer.on("loading", function (e) {
-					$(".audio-item")
-						.eq(index)
-						.find(".soundwave .audio-preloader span")
-						.html("LOADING " + e + "%");
-				});
-				wavesurfer.on("ready", function () {
-					$(".audio-item").eq(index).find(".soundwave").addClass("loaded");
-				});
-				$(this)
-					.find(".play")
-					.click(function () {
-						$(".controls").removeClass("playing");
-						$(this).closest(".controls").addClass("playing");
-						for (const w in wavesurfers) {
-							wavesurfers[w].pause();
-						}
-						$(".heroVideo:visible")[0].pause();
-						wavesurfers[index].play();
-					});
-				$(this)
-					.find(".pause")
-					.click(function () {
-						$(this).closest(".controls").removeClass("playing");
-						wavesurfers[index].pause();
-					});
-			});
+		
 		},
 	},
 	created() {

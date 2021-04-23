@@ -19,10 +19,10 @@ function mandomo_scripts()
     /* ----------- Stylesheets --------------- */
 
     /* ----------- Javascripts --------------- */
+    wp_enqueue_script('wavesurfer-js', 'https://unpkg.com/wavesurfer.js', array(), null, true);
     wp_enqueue_script('jquery-js', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array(), null, false);
     // wp_enqueue_script('vue-js', 'https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js', array(), null, false);
     wp_enqueue_script('vue-js', 'https://cdn.jsdelivr.net/npm/vue@2.6.12', array(), null, false);
-    wp_enqueue_script('wavesurfer-js', 'https://unpkg.com/wavesurfer.js', array(), null, false);
     wp_enqueue_script('typewriter-js', 'https://unpkg.com/typewriter-effect@latest/dist/core.js', array(), null, true);
     // wp_enqueue_script('main-js', get_theme_file_uri('js/app.js'), array(), null, true);
     /* ----------- Javascripts --------------- */

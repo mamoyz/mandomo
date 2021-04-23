@@ -1,3 +1,5 @@
+.landscape-notice { background: #110f14 url("../images/mandomo_phone.jpg") no-repeat; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9000000; background-size: auto 100%; background-position: center; display: none; }
+
 #ie-notice { margin: 200px auto; text-align: center; }
 
 @-webkit-keyframes flash { 0% { opacity: 1;
@@ -169,7 +171,7 @@ body { margin: 0; padding: 0; background: #110f14; color: #fff; font-family: "Te
 @media (max-width: 1023px) and (orientation: portrait) { .hero { padding-top: 0; padding-bottom: 0; }
   .hero .container { padding-left: 0; padding-right: 0; } }
 
-.hero .loading-overlay { position: fixed; right: -2px; top: -2px; left: -2px; z-index: 50; -webkit-clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); height: calc(var(--vh, 1vh) * 100 - 40px); background: #110f14; -webkit-transition: 6s all 1s linear; transition: 6s all 1s linear; }
+.hero .loading-overlay { position: fixed; right: -2px; top: -2px; left: -2px; z-index: 50; -webkit-clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); height: calc(var(--vh, 1vh) * 100 - 40px); background: #110f14; -webkit-transition: 6s -webkit-clip-path 1s linear; transition: 6s -webkit-clip-path 1s linear; transition: 6s clip-path 1s linear; transition: 6s clip-path 1s linear, 6s -webkit-clip-path 1s linear; }
 
 .hero .loading-overlay video { z-index: 51; }
 
@@ -179,7 +181,7 @@ body { margin: 0; padding: 0; background: #110f14; color: #fff; font-family: "Te
 
 @media (max-width: 1023px) and (orientation: portrait) { .hero .loading-overlay.loaded { -webkit-clip-path: polygon(0% 0%, 0% 100%, 10% 100%, 10% 45%, 90% 45%, 90% 55%, 10% 55%, 10% 100%, 100% 100%, 100% 0%); clip-path: polygon(0% 0%, 0% 100%, 10% 100%, 10% 45%, 90% 45%, 90% 55%, 10% 55%, 10% 100%, 100% 100%, 100% 0%); } }
 
-.hero .loading-overlay.isReady { -webkit-transition: all 2s ease; transition: all 2s ease; -webkit-clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 0%); clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 0%); }
+.hero .loading-overlay.isReady { -webkit-transition: -webkit-clip-path 2s ease; transition: -webkit-clip-path 2s ease; transition: clip-path 2s ease; transition: clip-path 2s ease, -webkit-clip-path 2s ease; -webkit-clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 0%); clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 0%); }
 
 @media (min-width: 1921px) { .hero .loading-overlay { max-width: 1920px; margin: auto; } }
 
@@ -367,6 +369,8 @@ header.isReady .menu-toggle { -webkit-animation: 1s fadeUp 1.5s forwards; animat
 header.isReady .indicator { -webkit-animation: 1s fadeUp 2s forwards; animation: 1s fadeUp 2s forwards; }
 
 .sec-architects { padding-top: 190px; }
+
+@media (max-width: 1023px) and (orientation: portrait) { .sec-architects { padding-top: 15vw; } }
 
 .sec-architects .wrapper { position: relative; }
 
@@ -794,7 +798,8 @@ footer .wrapper .footer-logo img { width: 100%; display: block; }
   footer .wrapper > div:nth-child(3) { font-size: 0.52vw; }
   footer .wrapper .footer-logo { width: 15.36vw; } }
 
-@media (orientation: landscape) and (max-width: 1023px) { .container { max-width: 117.14vw; padding-left: 5.71vw; padding-right: 5.71vw; }
+@media (orientation: landscape) and (max-width: 1023px) { .landscape-notice { display: block; }
+  .container { max-width: 117.14vw; padding-left: 5.71vw; padding-right: 5.71vw; }
   .line { width: 0.43vw; }
   .hero { padding-top: 5.36vw; padding-bottom: 8.21vw; }
   .hero .loading-overlay { right: -0.14vw; top: -0.14vw; left: -0.14vw; height: calc(var(--vh, 1vh) * 100 - 2.86vw); }

@@ -92,8 +92,13 @@
 							</div>
 							<div class="right">
 								<div class="audios">
-									<div class="audio-item yz-animate-mobile" :data-src="audio.audio_file_mp3" v-for="(audio,index) in tracks" :key="index">
-										<div class="controls" :style="'animation-delay:'+ (index*200+1000)+'ms'">
+									<?php 
+									
+									$tracks = get_field("audios");
+									foreach ($tracks as $index=>$audio):
+									?>
+									<div class="audio-item yz-animate-mobile" data-src="<?php echo $audio['audio_file_mp3'] ?>" >
+										<div class="controls" style="animation-delay:<?php  echo $index * 200 + 1000; ?>ms">
 											<svg class="play" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320.001 320.001" style="enable-background: new 0 0 320.001 320.001" xml:space="preserve">
 												<path
 													fill="#FFFFFF"
@@ -108,11 +113,11 @@
 												<path fill="#FFFFFF" d="m8 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0" />
 											</svg>
 										</div>
-										<div class="file-info" :style="'animation-delay:'+ (index*200+1000)+'ms'">
-											<span class="filename">{{audio.title}}</span>
-											<span class="duration">{{audio.duration}}</span>
+										<div class="file-info" style="animation-delay:<?php  echo $index * 200 + 1000; ?>ms">
+											<span class="filename"><?php echo $audio['title'] ?></span>
+											<span class="duration"><?php echo $audio['duration'] ?></span>
 										</div>
-										<div class="soundwave" :style="'animation-delay:'+ (index*200+1500)+'ms'">
+										<div class="soundwave" style="animation-delay:<?php  echo $index * 200 + 1500; ?>ms">
 											<div class="audio-preloader">
 												<svg id="wave" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 38.05">
 													<path id="Line_1" data-name="Line 1" d="M0.91,15L0.78,15A1,1,0,0,0,0,16v6a1,1,0,1,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H0.91Z" />
@@ -127,9 +132,10 @@
 												</svg>
 												<span>Loading Audio</span>
 											</div>
-											<div class="waveform" :class="'audio-item-'+index"></div>
+											<div class="waveform audio-item-<?php echo $index; ?>"></div>
 										</div>
 									</div>
+									<?php endforeach; ?>
 								</div>
 								<div class="content yz-animate yz-animate-mobile">
 									<?php the_field('sampler_text_content'); ?>

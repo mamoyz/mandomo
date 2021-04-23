@@ -840,6 +840,9 @@
 	}
 }
 @media (orientation: landscape) and (max-width: 1023px) {
+	.landscape-notice {
+		display: block;
+	}
 	* {
 	}
 	a {

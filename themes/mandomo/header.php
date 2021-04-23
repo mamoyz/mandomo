@@ -26,13 +26,14 @@
 		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, target-densityDpi=device-dpi" name="viewport" />
     <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 		<script>
-			window.addEventListener("orientationchange", function () {
-				window.location.reload();
-			});
+			// window.addEventListener("orientationchange", function () {
+			// 	window.location.reload();
+			// });
 		</script>
         <?php wp_head(); ?>
 	</head>
 	<body>
+		<div class="landscape-notice"></div>
 		<div id="app" :style="'--pageRight:'+pageRight" :class="{menuOpen,isReady}">
 			<header :class="{loaded,isReady}">
 				<a class="menu-toggle" href="#" @click.prevent="toggleMenu()">
