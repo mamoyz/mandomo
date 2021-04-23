@@ -46,15 +46,15 @@
 					<div class="container">
 						<div class="wrapper">
 							<div class="menu-videos default" :class="{ active: currentMenuVideo=='default' && menuOpen }">
-								<video class="hidden-mobile" playsinline autoplay muted loop>
+								<video class="hidden-mobile" playsinline  muted loop>
 									<source :src="defaultVideo" type="video/mp4" />
 								</video>
-								<video class="hidden-desktop" playsinline autoplay muted loop>
+								<video class="hidden-desktop" playsinline  muted loop>
 									<source :src="defaultVideoMobile" type="video/mp4" />
 								</video>
 							</div>
 							<div class="menu-videos" :key="link.title" :class="{ active: index==currentMenuVideo }" v-for="(link,index) in menu">
-								<video playsinline autoplay muted loop>
+								<video playsinline  muted loop>
 									<source :src="link.background_video" type="video/mp4" />
 								</video>
 							</div>

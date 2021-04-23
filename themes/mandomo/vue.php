@@ -67,12 +67,24 @@ var app = new Vue({
 		,
 		menuHover(index) {
 			if (!this.closing) this.currentMenuVideo = index;
+			$.each($(".menu .menu-videos"),function(j){
+				if(j==index+1){
+					 $(this).find("video:visible")[0].play();
+				} else{
+				 $(this).find("video:visible")[0].pause();
+				}
+   					
+			});
+			
 		},
 		toggleMenu(index) {
 			this.currentMenuVideo = "default";
 
 			if (!this.menuOpen) {
 				this.menuOpen = true;
+				$(".menu .menu-videos.default video:visible")[0].play();
+					$(".heroVideo:visible")[0].pause();
+
 			} else {
 				this.closing = true;
 				setTimeout(() => {
@@ -88,6 +100,9 @@ var app = new Vue({
 						$(".indicator > a").eq(index).click();
 					}, 3500);
 				}
+				$(".menu .menu-videos.default video:visible")[0].pause();
+					$(".heroVideo:visible")[0].play();
+
 			}
 		},
 		progress() {
@@ -100,6 +115,7 @@ var app = new Vue({
 					// this.initSoundWave();
 					$(".heroVideo.hidden-desktop")[0].currentTime = 9;
 					$(".heroVideo.hidden-mobile")[0].currentTime = 9;
+					$(".heroVideo:visible")[0].play();
 					setTimeout(() => {
 						this.isReady = true;
 						$("body").css({ "overflow-y": "scroll", height: "auto" });
@@ -345,6 +361,7 @@ var app = new Vue({
 						$(this)
 							.find(".floating-video")
 							.css({ transform: "translate(0," + translateVideo + "px)" });
+
 					}
 				}
 				if (wTop + wHeight * 0.3 > $(this).offset().top) {
@@ -353,7 +370,15 @@ var app = new Vue({
 						.eq($(this).index() - 1)
 						.addClass("active");
 				}
+
+					if (wTop + wHeight > $(this).offset().top && wTop < $(this).offset().top + $(this).innerHeight()) {
+							$(this).find("video:visible")[0].play();
+
+					} else{
+							$(this).find("video:visible")[0].pause();
+					}
 			});
+			
 		});
 
 		$(document).on("click", ".indicator a", function (e) {

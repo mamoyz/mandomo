@@ -5,9 +5,9 @@
 				<div class="container">
 					<div class="hero-wrapper">
 						<div class="loading-overlay" :class="{loaded,isReady}">
-							<video playsinline autoplay muted loop>
+							<!-- <video playsinline  muted loop>
 								<source src="<?php the_field('background_video'); ?>" type="video/mp4" />
-							</video>
+							</video> -->
 						</div>
 						<div class="logo-intro" :class="{loaded,isReady}">
 							<img src="<?php the_field('static_logo'); ?>" alt="" />
@@ -33,10 +33,10 @@
 								<img src="<?php the_field('animated_logo'); ?>" alt="" />
 							</a>
 						</div>
-						<video class="hidden-mobile heroVideo" playsinline autoplay :muted="!playWithSoundDesktop" loop>
+						<video class="hidden-mobile heroVideo" playsinline  :muted="!playWithSoundDesktop" loop>
 							<source src="<?php the_field('trailer_video'); ?>" type="video/mp4" />
 						</video>
-						<video class="hidden-desktop heroVideo" playsinline autoplay :muted="!playWithSoundMobile" loop>
+						<video class="hidden-desktop heroVideo" playsinline  :muted="!playWithSoundMobile" loop>
 							<source src="<?php the_field('trailer_video_mobile'); ?>" type="video/mp4" />
 						</video>
 						<a :class="{loaded,isReady}" class="explore" href="#"><span>EXPLORE</span></a>
@@ -59,10 +59,10 @@
 							<?php the_field('architects_content_text'); ?>
 							</div>
 							<div class="architects-video yz-animate-mobile">
-								<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+								<video class="hidden-mobile floating-video" playsinline  muted loop>
 									<source src="<?php the_field('architects_video'); ?>" type="video/mp4" />
 								</video>
-								<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+								<video class="hidden-desktop floating-video" playsinline  muted loop>
 									<source src="<?php the_field('architects_video_mobile'); ?>" type="video/mp4" />
 								</video>
 							</div>
@@ -83,10 +83,10 @@
 						</div>
 						<div class="sec-content yz-animate">
 							<div class="left yz-animate-mobile">
-								<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+								<video class="hidden-mobile floating-video" playsinline  muted loop>
 									<source src="<?php the_field('sampler_video'); ?>" type="video/mp4" />
 								</video>
-								<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+								<video class="hidden-desktop floating-video" playsinline  muted loop>
 									<source src="<?php the_field('sampler_video_mobile'); ?>" type="video/mp4" />
 								</video>
 							</div>
@@ -148,10 +148,10 @@
 			<section class="section sec-credits yz-animate">
 				<div class="container">
 					<div class="credits-video yz-animate-mobile">
-						<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+						<video class="hidden-mobile floating-video" playsinline  muted loop>
 							<source src="<?php the_field('credits_video'); ?>" type="video/mp4" />
 						</video>
-							<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+							<video class="hidden-desktop floating-video" playsinline  muted loop>
 							<source src="<?php the_field('credits_video_mobile'); ?>" type="video/mp4" />
 						</video>
 					</div>
@@ -187,10 +187,10 @@
 								<?php the_field('contact_main_title'); ?>
 							</h2>
 							<div class="contact-video yz-animate-mobile">
-								<video class="hidden-mobile floating-video" playsinline autoplay muted loop>
+								<video class="hidden-mobile floating-video" playsinline  muted loop>
 									<source src="<?php the_field('contact_video_copy'); ?>" type="video/mp4" />
 								</video>
-								<video class="hidden-desktop floating-video" playsinline autoplay muted loop>
+								<video class="hidden-desktop floating-video" playsinline  muted loop>
 									<source src="<?php the_field('contact_video_mobile'); ?>" type="video/mp4" />
 								</video>
 							</div>
@@ -198,10 +198,10 @@
 					</div>
 				</div>
 			</section>
-			<div class="video-bg" :class="{loaded,isReady}">
-				<video playsinline autoplay muted loop>
+			<!-- <div class="video-bg" :class="{loaded,isReady}">
+				<video playsinline  muted loop>
 					<source src="<?php the_field('background_video'); ?>" type="video/mp4" />
 				</video>
-			</div>
+			</div> -->
 
 <?php get_footer(); ?>
