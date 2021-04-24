@@ -54,7 +54,7 @@
 							document.querySelector("#preloader-typewriter span").innerHTML = output;
 						}
 						counter++;
-					}, 30);
+					}, 50);
 	}
 	console.log("DOM LOADED");
 	setTimeout(function() {
