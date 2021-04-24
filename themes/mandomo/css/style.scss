@@ -98,7 +98,43 @@ body {
 	font-family: "Termina";
 	font-weight: 400;
 }
-
+#preloader-typewriter {
+	position: fixed;
+	z-index: 999999999999;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	div {
+		font-size: 26px;
+		letter-spacing: 10px;
+		font-weight: 800;
+		-webkit-text-stroke: 1.2px white;
+		color: transparent;
+		text-align: center;
+		line-height: 50px;
+		padding: 0 5%;
+		.Typewriter__wrapper {
+			display: block;
+			min-height: 105px;
+		}
+		.Typewriter__cursor {
+			display: none !important;
+		}
+	}
+	@include down-md {
+		div {
+			font-size: 5.33vw;
+			letter-spacing: 1.87vw;
+			-webkit-text-stroke: 0.2.13vw white;
+			line-height: 10.13vw;
+		}
+	}
+}
 .container {
 	width: 100%;
 	max-width: 1640px;
@@ -130,6 +166,7 @@ body {
 	height: calc(var(--vh, 1vh) * 100);
 	padding-top: 75px;
 	padding-bottom: 115px;
+
 	@include down-md() {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -138,6 +175,7 @@ body {
 			padding-right: 0;
 		}
 	}
+
 	.loading-overlay {
 		position: fixed;
 		// border-top: 30vh solid #110f14;

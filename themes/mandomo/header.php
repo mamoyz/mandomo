@@ -25,6 +25,24 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, target-densityDpi=device-dpi" name="viewport" />
     <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+<script>
+	function twr(){
+		var preloaderTypeWriter = document.querySelector("#preloader-typewriter div");
+		var ptypewriter = new Typewriter(preloaderTypeWriter, {
+			loop: true,
+			delay: 45,
+		});
+			-(-(-(-ptypewriter.typeString("<strong>TO ELEVATE VISUAL IDENTITY </strong><br>").typeString("<strong> THROUGH BOLD CINEMATIC SOUND</strong>").pauseFor(3000).deleteAll(10).start())));
+	}
+	console.log("DOM LOADED");
+	setTimeout(function() {
+		twr();
+	}, 100);
+
+
+		</script>
 		<script>
 			//FULL STORY SCRIPT
 window['_fs_debug'] = false;
@@ -50,14 +68,14 @@ window['_fs_namespace'] = 'FS';
     g._v="1.3.0";
 })(window,document,window['_fs_namespace'],'script','user');
 </script>
-		<script>
-			// window.addEventListener("orientationchange", function () {
-			// 	window.location.reload();
-			// });
-		</script>
+	
         <?php wp_head(); ?>
+
 	</head>
 	<body>
+		<div id="preloader-typewriter" style="position:fixed; z-index:999999999999;">
+							<div></div>
+						</div>
 		<div class="landscape-notice"></div>
 		<div id="app" :style="'--pageRight:'+pageRight" :class="{menuOpen,isReady}">
 			<header :class="{loaded,isReady}">

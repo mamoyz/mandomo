@@ -12,6 +12,7 @@
 						<div class="logo-intro" :class="{loaded,isReady}">
 							<img src="<?php the_field('static_logo'); ?>" alt="" />
 						</div>
+						
 						<div @click="pausePlay()" :class="{loaded,isReady}" class="hero-video-play">
 							<a class="hidden-desktop" @click.prevent.stop="unmute('mobile')" href="#">
 								<span v-show="!playWithSoundMobile">

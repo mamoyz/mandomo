@@ -17,10 +17,14 @@
 	
 
         <?php wp_footer(); ?>
+				
 		<script>
+
 			<?php require("vue.php"); ?>
 		</script>
 			<script>
+
+
 			if (navigator.userAgent.indexOf("Trident") > 0) {
 				document.querySelector("#app").innerHTML = "<div id='ie-notice'><p>Please Upgrade Your Browser!</p></div>";
 			}
@@ -28,6 +32,8 @@
 			// if(navigator.userAgent.toLowerCase().indexOf('firefox') > 0){
 			// 	$(".hideFF").remove();
 			// }
+					// $("#preloader-typewriter").fadeOut();
+
 			setTimeout(function() {
 					let wavesurfers = [];
 			$.each($(".audio-item"), function (index) {

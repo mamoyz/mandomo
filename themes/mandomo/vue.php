@@ -109,6 +109,7 @@ var app = new Vue({
 			let int = setInterval(() => {
 				this.loaded = document.readyState === "complete";
 				if (this.loaded) {
+					$("#preloader-typewriter").fadeOut();
 					window.scrollTo(0, 0);
 
 					console.log("LOADED");
