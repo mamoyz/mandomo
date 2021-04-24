@@ -28,17 +28,37 @@
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
 <script>
-	function twr(){
-		var preloaderTypeWriter = document.querySelector("#preloader-typewriter div");
-		var ptypewriter = new Typewriter(preloaderTypeWriter, {
-			loop: true,
-			delay: 45,
-		});
-			-(-(-(-ptypewriter.typeString("<strong>TO ELEVATE VISUAL IDENTITY </strong><br>").typeString("<strong> THROUGH BOLD CINEMATIC SOUND</strong>").pauseFor(3000).deleteAll(10).start())));
+	function twr(word){
+					let count = word.length;
+					let repeat = 2;
+					let counter = 0;
+					let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~|></";
+					let interval = setInterval(function(){
+						let output = "";
+						if (counter == repeat * count + 1) {
+							clearInterval(interval);
+						}
+						for (let j = 0; j < count; j++) {
+							let randomCharacter = Math.floor(Math.random() * characters.length);
+
+							if ((j + 1) * repeat <= counter) {
+								output += word[j];
+							} else {
+								if (word[j] == " ") {
+									output += " ";
+								} else {
+									output += characters[randomCharacter];
+								}
+							}
+
+							document.querySelector("#preloader-typewriter span").innerHTML = output;
+						}
+						counter++;
+					}, 30);
 	}
 	console.log("DOM LOADED");
 	setTimeout(function() {
-		twr();
+		twr("TO ELEVATE VISUAL IDENTITY THROUGH BOLD CINEMATIC SOUND");
 	}, 100);
 
 
@@ -74,7 +94,7 @@ window['_fs_namespace'] = 'FS';
 	</head>
 	<body>
 		<div id="preloader-typewriter" style="position:fixed; z-index:999999999999;">
-							<div></div>
+							<div><span></span></div>
 						</div>
 		<div class="landscape-notice"></div>
 		<div id="app" :style="'--pageRight:'+pageRight" :class="{menuOpen,isReady}">

@@ -160,11 +160,7 @@ body { margin: 0; padding: 0; background: #110f14; color: #fff; font-family: "Te
 
 #preloader-typewriter { position: fixed; z-index: 999999999999; top: 0; left: 0; width: 100vw; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; text-align: center; }
 
-#preloader-typewriter div { font-size: 26px; letter-spacing: 10px; font-weight: 800; -webkit-text-stroke: 1.2px white; color: transparent; text-align: center; line-height: 50px; padding: 0 5%; }
-
-#preloader-typewriter div .Typewriter__wrapper { display: block; min-height: 105px; }
-
-#preloader-typewriter div .Typewriter__cursor { display: none !important; }
+#preloader-typewriter div { font-size: 26px; letter-spacing: 10px; font-weight: 800; -webkit-text-stroke: 1.2px white; color: transparent; text-align: center; line-height: 50px; padding: 0 15%; width: 1480px; margin: auto; }
 
 @media (max-width: 1023px) and (orientation: portrait) { #preloader-typewriter div { font-size: 5.33vw; letter-spacing: 1.87vw; -webkit-text-stroke: 0.2 0.13vw white; line-height: 10.13vw; } }
 

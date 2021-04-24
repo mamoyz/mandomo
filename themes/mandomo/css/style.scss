@@ -117,14 +117,9 @@ body {
 		color: transparent;
 		text-align: center;
 		line-height: 50px;
-		padding: 0 5%;
-		.Typewriter__wrapper {
-			display: block;
-			min-height: 105px;
-		}
-		.Typewriter__cursor {
-			display: none !important;
-		}
+		padding: 0 15%;
+		width: 1480px;
+		margin: auto;
 	}
 	@include down-md {
 		div {
