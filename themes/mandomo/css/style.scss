@@ -108,8 +108,9 @@ body {
 	height: calc(var(--vh, 1vh) * 100);
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
-	text-align: center;
+	text-align: left;
 	max-width: 1920px;
 	margin: auto;
 	div {
@@ -120,16 +121,27 @@ body {
 		color: transparent;
 		text-align: center;
 		line-height: 50px;
-		padding: 0 15%;
+		padding: 0 25%;
+		height: 60px;
 		width: 100%;
-		margin: auto;
+		// margin: auto;
+		span {
+			opacity: 0.2;
+			&.finished {
+				opacity: 1;
+			}
+		}
+		@include down-md {
+		}
 	}
 	@include down-md {
 		div {
-			font-size: 5.33vw;
+			font-size: 3.8vw;
 			letter-spacing: 1.87vw;
-			-webkit-text-stroke: 0.2.13vw white;
-			line-height: 10.13vw;
+			line-height: 9.5vw;
+			height: 20vw;
+			-webkit-text-stroke: 0.2vw white;
+			padding: 0 12vw;
 		}
 	}
 }

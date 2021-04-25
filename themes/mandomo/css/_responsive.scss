@@ -13,13 +13,7 @@
 			letter-spacing: 0.52vw;
 			-webkit-text-stroke: 0.06vw white;
 			line-height: 2.6vw;
-			.Typewriter__wrapper {
-				min-height: 7vw;
-			}
-		}
-		@include down-md {
-			div {
-			}
+			height: 3.15vw;
 		}
 	}
 	.line {

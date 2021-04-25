@@ -28,9 +28,9 @@
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
 <script>
-	function twr(word){
+	function twr(word,selector){
 					let count = word.length;
-					let repeat = 2;
+					let repeat = 1;
 					let counter = 0;
 					let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~|></";
 					let interval = setInterval(function(){
@@ -40,28 +40,27 @@
 						}
 						for (let j = 0; j < count; j++) {
 							let randomCharacter = Math.floor(Math.random() * characters.length);
-
 							if ((j + 1) * repeat <= counter) {
-								output += word[j];
+								output += "<span class='finished'>"+word[j]+"</span>";
 							} else {
 								if (word[j] == " ") {
-									output += " ";
+									output += "<span>  </span>";
 								} else {
-									output += characters[randomCharacter];
+									output +=  "<span>"+characters[randomCharacter]+"</span>";
 								}
 							}
-
-							document.querySelector("#preloader-typewriter span").innerHTML = output;
+							document.querySelector(selector).innerHTML = output;
 						}
 						counter++;
-					}, 50);
+					}, 40);
 	}
-	console.log("DOM LOADED");
-	setTimeout(function() {
-		twr("TO ELEVATE VISUAL IDENTITY THROUGH BOLD CINEMATIC SOUND");
-	}, 100);
-
-
+		console.log("DOM LOADED");
+		setTimeout(function() {
+			twr("TO ELEVATE VISUAL IDENTITY","#preloader-typewriter div.twr1");
+		}, 100);
+		setTimeout(function() {
+				twr("THROUGH BOLD CINEMATIC SOUND","#preloader-typewriter div.twr2");
+		}, 1400);
 		</script>
 		<script>
 			//FULL STORY SCRIPT
@@ -93,9 +92,10 @@ window['_fs_namespace'] = 'FS';
 
 	</head>
 	<body>
-		<div id="preloader-typewriter" style="position:fixed; z-index:999999999999;">
-							<div><span></span></div>
-						</div>
+	<div id="preloader-typewriter" style="position:fixed; z-index:999999999999;">
+			<div class="twr1"></div>
+			<div class="twr2"></div>
+	</div> 
 		<div class="landscape-notice"></div>
 		<div id="app" :style="'--pageRight:'+pageRight" :class="{menuOpen,isReady}">
 			<header :class="{loaded,isReady}">
