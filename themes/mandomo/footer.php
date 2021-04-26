@@ -14,14 +14,10 @@
 				</div>
 			</footer>
 		</div>
-	
-
-        <?php wp_footer(); ?>
-				
 		<script>
-
 			<?php require("vue.php"); ?>
 		</script>
+        <?php wp_footer(); ?>
 			<script>
 
 

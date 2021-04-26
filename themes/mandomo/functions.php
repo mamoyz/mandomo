@@ -24,7 +24,7 @@ function mandomo_scripts()
     // wp_enqueue_script('vue-js', 'https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js', array(), null, false);
     wp_enqueue_script('vue-js', 'https://cdn.jsdelivr.net/npm/vue@2.6.12', array(), null, true);
     // wp_enqueue_script('typewriter-js', 'https://unpkg.com/typewriter-effect@latest/dist/core.js', array(), null, false);
-    // wp_enqueue_script('main-js', get_theme_file_uri('js/app.js'), array(), null, true);
+    wp_enqueue_script('main-js', get_theme_file_uri('js/app.js'), array(), mt_rand(0, 9999999), true);
     /* ----------- Javascripts --------------- */
 }
 add_action('wp_enqueue_scripts', 'mandomo_scripts');
