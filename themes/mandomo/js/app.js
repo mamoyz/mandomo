@@ -80,8 +80,8 @@ var app = new Vue({
 		},
 		progress() {
 			let int = setInterval(() => {
-				this.loaded = document.readyState === "complete";
 				if (!$("#preloader-typewriter").hasClass("writing-out")) {
+					this.loaded = document.readyState === "complete";
 					if (this.loaded) {
 						$("#preloader-typewriter").fadeOut();
 						window.scrollTo(0, 0);
