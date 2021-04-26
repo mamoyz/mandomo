@@ -63,7 +63,7 @@
 		}, 1800);
 		setTimeout(function() {
 			document.querySelector("#preloader-typewriter").classList.remove("writing-out");
-		}, 3500);
+		}, 5000);
 		</script>
 		<script>
 			//FULL STORY SCRIPT
