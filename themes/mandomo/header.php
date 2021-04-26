@@ -52,7 +52,7 @@
 							document.querySelector(selector).innerHTML = output;
 						}
 						counter++;
-					}, 40);
+					}, 60);
 	}
 		console.log("DOM LOADED");
 		setTimeout(function() {
@@ -60,7 +60,10 @@
 		}, 100);
 		setTimeout(function() {
 				twr("THROUGH BOLD CINEMATIC SOUND","#preloader-typewriter div.twr2");
-		}, 1400);
+		}, 1800);
+		setTimeout(function() {
+			document.querySelector("#preloader-typewriter").classList.remove("writing-out");
+		}, 3500);
 		</script>
 		<script>
 			//FULL STORY SCRIPT
@@ -92,7 +95,7 @@ window['_fs_namespace'] = 'FS';
 
 	</head>
 	<body>
-	<div id="preloader-typewriter" style="position:fixed; z-index:999999999999;">
+	<div id="preloader-typewriter" class="writing-out" style="position:fixed; z-index:999999999999;">
 			<div class="twr1"></div>
 			<div class="twr2"></div>
 	</div> 

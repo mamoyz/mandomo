@@ -29,9 +29,6 @@
 			}
 		}
 		.loading-overlay {
-			right: -0.1vw;
-			top: -0.1vw;
-			left: -0.1vw;
 			height: calc(var(--vh, 1vh) * 100 - 2.08vw);
 
 			@include down-md {
@@ -898,10 +895,6 @@
 			}
 		}
 		.loading-overlay {
-			right: -0.14vw;
-			top: -0.14vw;
-			left: -0.14vw;
-
 			height: calc(var(--vh, 1vh) * 100 - 2.86vw);
 		}
 

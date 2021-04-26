@@ -109,9 +109,9 @@ var app = new Vue({
 			let int = setInterval(() => {
 				this.loaded = document.readyState === "complete";
 				if (this.loaded) {
+					if(!$("#preloader-typewriter").hasClass(".writing-out")){
 					$("#preloader-typewriter").fadeOut();
 					window.scrollTo(0, 0);
-
 					console.log("LOADED");
 					// this.initSoundWave();
 					$(".heroVideo.hidden-desktop")[0].currentTime = 9;
@@ -123,6 +123,7 @@ var app = new Vue({
 					}, 8000);
 					// }, 1000);
 					return clearInterval(int);
+				}
 				}
 			}, 100);
 		},

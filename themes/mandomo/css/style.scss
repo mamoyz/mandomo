@@ -192,9 +192,9 @@ body {
 		// border-left: 250px solid #110f14;
 		// border-right: 1230px solid #110f14;
 
-		right: -2px;
-		top: -2px;
-		left: -2px;
+		right: 0px;
+		top: 0px;
+		left: 0px;
 		z-index: 50;
 		clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%);
 		height: calc(var(--vh, 1vh) * 100 - 40px);

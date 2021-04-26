@@ -183,7 +183,7 @@ body { margin: 0; padding: 0; background: #110f14; color: #fff; font-family: "Te
 @media (max-width: 1023px) and (orientation: portrait) { .hero { padding-top: 0; padding-bottom: 0; }
   .hero .container { padding-left: 0; padding-right: 0; } }
 
-.hero .loading-overlay { position: fixed; right: -2px; top: -2px; left: -2px; z-index: 50; -webkit-clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); height: calc(var(--vh, 1vh) * 100 - 40px); background: #110f14; -webkit-transition: 6s -webkit-clip-path 1s linear; transition: 6s -webkit-clip-path 1s linear; transition: 6s clip-path 1s linear; transition: 6s clip-path 1s linear, 6s -webkit-clip-path 1s linear; }
+.hero .loading-overlay { position: fixed; right: 0px; top: 0px; left: 0px; z-index: 50; -webkit-clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 20% 37%, 0% 37%, 0% 63%, 20% 63%, 20% 100%, 100% 100%, 100% 0%); height: calc(var(--vh, 1vh) * 100 - 40px); background: #110f14; -webkit-transition: 6s -webkit-clip-path 1s linear; transition: 6s -webkit-clip-path 1s linear; transition: 6s clip-path 1s linear; transition: 6s clip-path 1s linear, 6s -webkit-clip-path 1s linear; }
 
 .hero .loading-overlay video { z-index: 51; }
 
@@ -733,7 +733,7 @@ footer .wrapper .footer-logo img { width: 100%; display: block; }
   #preloader-typewriter div { font-size: 1.35vw; letter-spacing: 0.52vw; -webkit-text-stroke: 0.06vw white; line-height: 2.6vw; height: 3.15vw; }
   .line { width: 0.31vw; }
   .hero { padding-top: 3.91vw; padding-bottom: 5.99vw; }
-  .hero .loading-overlay { right: -0.1vw; top: -0.1vw; left: -0.1vw; height: calc(var(--vh, 1vh) * 100 - 2.08vw); }
+  .hero .loading-overlay { height: calc(var(--vh, 1vh) * 100 - 2.08vw); }
   .hero .logo-intro img { -webkit-transform: translate(0, 2.6vw); transform: translate(0, 2.6vw); width: 54.43vw; }
   .hero .hero-video-play { -webkit-transform: translate(0, 1.56vw); transform: translate(0, 1.56vw); }
   .hero .hero-video-play a > span { font-size: 1.67vw; letter-spacing: 0.68vw; -webkit-text-stroke: 0.09vw white; }
@@ -815,7 +815,7 @@ footer .wrapper .footer-logo img { width: 100%; display: block; }
   .container { max-width: 117.14vw; padding-left: 5.71vw; padding-right: 5.71vw; }
   .line { width: 0.43vw; }
   .hero { padding-top: 5.36vw; padding-bottom: 8.21vw; }
-  .hero .loading-overlay { right: -0.14vw; top: -0.14vw; left: -0.14vw; height: calc(var(--vh, 1vh) * 100 - 2.86vw); }
+  .hero .loading-overlay { height: calc(var(--vh, 1vh) * 100 - 2.86vw); }
   .hero .logo-intro img { -webkit-transform: translate(0, 3.57vw); transform: translate(0, 3.57vw); width: 74.64vw; }
   .hero .hero-video-play { -webkit-transform: translate(0, 2.14vw); transform: translate(0, 2.14vw); }
   .hero .hero-video-play a > span { font-size: 2.29vw; letter-spacing: 0.93vw; -webkit-text-stroke: 0.13vw white; }
